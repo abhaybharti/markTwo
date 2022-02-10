@@ -1,0 +1,24 @@
+body {
+  background-color: #eaf6f6;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px;
+}
+
+:root {
+  --primary-color: #7c3aed;
+  --dark-gray: #0f172a;
+  --off-white: #f3f4f6;
+}
+
+hr {
+  margin: 2em 0em;
+}
+
+.container {
+  padding: 0rem 1rem;
+}
+
+.link-primary {
+  text-decoration: none;
+  color: blue;
+}

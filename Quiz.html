@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz App</title>
+  </head>
+  <body onload="updateQuestionOnUi()">
+    <div id="quizcontainer">
+      <h1 id="questionName"></h1>
+      <br />
+      <hr />
+      <input
+        type="radio"
+        name="answer"
+        id="answer1"
+        value="answer1"
+        onclick="updateAnswer()"
+      /><span id="answerText1"></span>
+      <input
+        type="radio"
+        name="answer"
+        id="answer2"
+        value="answer2"
+        onclick="updateAnswer()"
+      /><span id="answerText2"></span>
+      <input
+        type="radio"
+        name="answer"
+        id="answer3"
+        value="answer3"
+        onclick="updateAnswer()"
+      /><span id="answerText3"></span>
+      <input
+        type="radio"
+        name="answer"
+        id="answer4"
+        value="answer4"
+        onclick="updateAnswer()"
+      /><span id="answerText4"></span>
+      <br />
+      <button
+        id="nextQuestion"
+        type="button"
+        onclick="checkAnswerAndLoadNextQuestion()"
+      >
+        Next
+      </button>
+      <button id="skipQuestion">Skip</button>
+      <br />
+      <div id="selectedAnswser"></div>
+      <div id="score"></div>
+    </div>
+
+    <h1 id="resultTitle"></h1>
+    <div id="finalscore"></div>
+    <div id="finalscoreinpercent"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
