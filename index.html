@@ -8,20 +8,72 @@
     <link rel="stylesheet" href="style.css" />
     <title>Quiz App</title>
   </head>
-  <body>
-    <h1>Welcome to JavaScript Quiz</h1>
-    <label for="name">Name</label>
-    <input type="text" placeholder="Enter your name" id="username" required />
-    <button id="startquiz">
-      <a href="Quiz.html" onclick="readUserName()" class="link-primary"
-        ><strong> Start Quiz</strong></a
+  <body onload="displayContainer()" class="container">
+    <!-- User Detail section -->
+    <div id="userdetailcontainer">
+      <h1>Welcome to JavaScript Quiz</h1>
+      <label for="username">Name:</label>
+      <input type="text" placeholder="Enter your name" id="username" required />
+      <button id="startquiz" onclick="readUserNameAndStartQuiz()">
+        <strong> Start Quiz</strong>
+      </button>
+      <p>*Name is mandatory</p>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quizcontainer" class="container">
+      <h1 id="questionName"></h1>
+
+      <hr />
+      <input
+        type="radio"
+        name="answer"
+        id="answer1"
+        value="answer1"
+        onclick="updateAnswer()"
+      /><span id="answerText1"></span>
+      <input
+        type="radio"
+        name="answer"
+        id="answer2"
+        value="answer2"
+        onclick="updateAnswer()"
+      /><span id="answerText2"></span>
+      <input
+        type="radio"
+        name="answer"
+        id="answer3"
+        value="answer3"
+        onclick="updateAnswer()"
+      /><span id="answerText3"></span>
+      <input
+        type="radio"
+        name="answer"
+        id="answer4"
+        value="answer4"
+        onclick="updateAnswer()"
+      /><span id="answerText4"></span>
+      <br />
+      <br />
+      <button
+        id="nextQuestion"
+        type="button"
+        onclick="checkAnswerAndLoadNextQuestion()"
       >
-    </button>
+        Next
+      </button>
+      <button id="skipQuestion">Skip</button>
+      <br />
+      <br />
+      <div id="selectedAnswser"></div>
+      <div id="score">Score:</div>
+    </div>
+
+    <!-- Result display -->
+    <h1 id="resultTitle"></h1>
+    <div id="finalscore"></div>
+    <div id="finalscoreinpercent"></div>
     <script src="index.js"></script>
-    <script>
-      function readUserName() {
-        userName = document.getElementById("username").value;
-      }
-    </script>
   </body>
+  <script src="index.js"></script>
 </html>
